@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Prediction Result</title>
+</head>
+<body>
+  <h1>Predicted Insurance Charges</h1>
+
+  <p><strong>Prediction:</strong> ${{ prediction }}</p>
+
+  <h3>Input details:</h3>
+  <ul>
+    <li>Age: {{ form_data.age }}</li>
+    <li>Sex: {{ form_data.sex }}</li>
+    <li>BMI: {{ form_data.bmi }}</li>
+    <li>Children: {{ form_data.children }}</li>
+    <li>Smoker: {{ form_data.smoker }}</li>
+    <li>Region: {{ form_data.region }}</li>
+  </ul>
+
+  <a href="/">🔙 Back to form</a>
+</body>
+</html>
