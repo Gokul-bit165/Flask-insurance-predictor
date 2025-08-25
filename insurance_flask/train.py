@@ -13,10 +13,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(HERE, "data", "insurance_small.csv")
 MODEL_PATH = os.path.join(HERE, "model.pkl")
 
-# Load data
+
 df = pd.read_csv(DATA_PATH)
 
-# Features / Target
 FEATURES_CAT = ["sex", "smoker", "region"]
 FEATURES_NUM = ["age", "bmi", "children"]
 TARGET = "charges"
@@ -24,7 +23,6 @@ TARGET = "charges"
 X = df[FEATURES_NUM + FEATURES_CAT]
 y = df[TARGET]
 
-# Preprocess: OneHot for categoricals, scale numerics (optional but common)
 preprocessor = ColumnTransformer(
     transformers=[
         ("cat", OneHotEncoder(handle_unknown="ignore", sparse_output=False), FEATURES_CAT),
@@ -32,7 +30,7 @@ preprocessor = ColumnTransformer(
     ]
 )
 
-# Simple baseline model
+
 model = LinearRegression()
 
 pipe = Pipeline(steps=[("preprocess", preprocessor),
