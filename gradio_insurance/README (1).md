@@ -90,5 +90,5 @@ scikit-learn==1.2.2
 ---
 
 ## 📸 Example (UI Screenshot)
-   ![Medical Insurance Cost Predictor UI](gradio_insurance\ui.png)
+   ![Medical Insurance Cost Predictor UI](gradio_insurance/ui.png)
 👉 *(Add your own screenshot here, e.g. UI form + predicted output)*  
