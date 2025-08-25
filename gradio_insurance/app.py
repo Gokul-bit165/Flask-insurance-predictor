@@ -7,7 +7,7 @@ import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(HERE, "model.pkl")
 model = joblib.load(MODEL_PATH)  
-q
+
 
 def predict(age, sex, bmi, children, smoker, region):
     input_df = pd.DataFrame([{
