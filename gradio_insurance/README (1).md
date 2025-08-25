@@ -4,7 +4,9 @@ An interactive web app to **predict medical insurance charges** using a regressi
 Deployed with **Gradio** and ready to run on **Hugging Face Spaces** 🚀  
 
 ---
+## 🌟 Live 
 
+Try the app instantly: [Medical Insurance Cost Predictor](https://huggingface.co/spaces/GokulV/insurance-predictor)
 ## 📂 Project Structure
 ```text
 insurance_predictor/
