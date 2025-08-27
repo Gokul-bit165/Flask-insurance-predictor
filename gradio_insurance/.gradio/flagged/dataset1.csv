@@ -1,2 +1,0 @@
-Age,Sex,BMI,Children,Smoker,Region,output,timestamp
-18,male,25,0,no,southeast,Predicted Charges: $445.2,2025-08-25 11:43:18.265667

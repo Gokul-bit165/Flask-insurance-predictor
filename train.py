@@ -36,14 +36,14 @@ model = LinearRegression()
 pipe = Pipeline(steps=[("preprocess", preprocessor),
                       ("model", model)])
 
-# Train/test split (small data but useful to illustrate the workflow)
+
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
 pipe.fit(X_train, y_train)
 
-# Evaluate
+
 y_pred = pipe.predict(X_test)
 r2 = r2_score(y_test, y_pred) if len(y_test) > 0 else float("nan")
 mae = mean_absolute_error(y_test, y_pred) if len(y_test) > 0 else float("nan")
@@ -52,6 +52,6 @@ print(f"Trained LinearRegression on {len(X_train)} rows.")
 print(f"Test R^2: {r2:.4f}")
 print(f"Test MAE: {mae:.4f}")
 
-# Save model
+
 joblib.dump(pipe, MODEL_PATH)
 print(f"Saved model to: {MODEL_PATH}")
